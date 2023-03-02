@@ -38,7 +38,7 @@ jobs:
         run: mvn clean package -DskipTests
         
       - name: Docker Compose Build
-        working-directory: ./8-containerizing-the-microservices-stack-with-docker-and-docker-compose
+        working-directory: ./8-containerizing-the-microservices-stack-with-docker-and-docker-compose/
         run: docker-compose build
 
       - name: Push to Docker Hub Container Registry
