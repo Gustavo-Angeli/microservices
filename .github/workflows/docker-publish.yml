@@ -22,19 +22,19 @@ jobs:
           distribution: 'adopt'
 
       - name: Build Eureka Naming Server Container Image
-        working-directory: ./8-containerizing-the-microservices-stack-with-docker-and-docker-compose/naming-server
+        working-directory: ./8-containerizing-the-microservices-stack-with-docker-and-docker-compose/naming-server/
         run: mvn spring-boot:build-image -DskipTests
 
       - name: Build API Gateway Container Image
-        working-directory: ./8-containerizing-the-microservices-stack-with-docker-and-docker-compose/api-gateway
+        working-directory: ./8-containerizing-the-microservices-stack-with-docker-and-docker-compose/api-gateway/
         run: mvn spring-boot:build-image -DskipTests
 
       - name: Build Cambio Microservice Jar
-        working-directory: ./8-containerizing-the-microservices-stack-with-docker-and-docker-compose/cambio-service
+        working-directory: ./8-containerizing-the-microservices-stack-with-docker-and-docker-compose/cambio-service/
         run: mvn clean package -DskipTests
 
       - name: Build Book Microservice Jar
-        working-directory: ./8-containerizing-the-microservices-stack-with-docker-and-docker-compose/book-service
+        working-directory: ./8-containerizing-the-microservices-stack-with-docker-and-docker-compose/book-service/
         run: mvn clean package -DskipTests
         
       - name: Docker Compose Build
